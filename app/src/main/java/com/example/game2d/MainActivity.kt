@@ -28,10 +28,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.foundation.layout.offset
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.IntOffset
-
-
-
 import kotlin.math.abs
+
+
 class Background(val screenW:Int) {
     var x1 = 0  //背景圖1_x軸
     var x2 = screenW  //背景圖2_x軸
