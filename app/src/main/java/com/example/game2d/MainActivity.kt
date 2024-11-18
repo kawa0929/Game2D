@@ -56,7 +56,7 @@ class MainActivity : ComponentActivity() {
                     val screenW = resources.displayMetrics.widthPixels
                     val screenH = resources.displayMetrics.heightPixels
                     val game = Game(GlobalScope,screenW, screenH)
-                    Start(m = Modifier.padding(innerPadding),game, screenW)
+                    Start(m = Modifier.padding(innerPadding),game)
 
                 }
             }
@@ -65,7 +65,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Start(m: Modifier, game:Game, screenW:Int) {
+fun Start(m: Modifier, game:Game) {
     var msg by remember { mutableStateOf("遊戲開始") }
     val counter by game.state.collectAsState()
     var counter2 by remember { mutableStateOf(0) }
@@ -88,8 +88,6 @@ fun Start(m: Modifier, game:Game, screenW:Int) {
 
 
     )
-
-
 
 
 
